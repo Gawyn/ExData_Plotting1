@@ -5,7 +5,9 @@ c1<-read.table("household_power_consumption.txt", sep=";", header = TRUE, na.str
 ds = c("1/2/2007", "2/2/2007")
 d1 <- c1[is.element(c1$Date, ds),]
 
-# Building the plot
+# Setting the format, with size and a transparent background as the example
 png("plot1.png", width = 480, height = 480, bg = "transparent")
+
+# Building the plot
 hist(d1$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", main = "Global Active Power")
 dev.off()

@@ -10,8 +10,10 @@ d1$Date <- as.Date(d1$Date, format = "%d/%m/%Y")
 times <- paste(d1$Date, d1$Time)
 formatted_times <- strptime(times, format = "%Y-%m-%d %H:%M:%S")  
 
-# Building the plot
+# Setting the format, with size and a transparent background as the example
 png("plot3.png", width = 480, height = 480, bg = "transparent")
+
+# Building the plot
 plot(formatted_times, d1$Sub_metering_1, type = "l", xlab= "", ylab = "Energy sub metering", col = "black")
 lines(formatted_times, d1$Sub_metering_2, col = "red")
 lines(formatted_times, d1$Sub_metering_3, col = "blue")
