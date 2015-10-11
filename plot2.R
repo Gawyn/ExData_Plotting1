@@ -12,6 +12,6 @@ times <- paste(d1$Date, d1$Time)
 formatted_times <- strptime(times, format = "%Y-%m-%d %H:%M:%S")  
 
 # Building the plot
-png("plot2.png", width = 480, height = 480)
+png("plot2.png", width = 480, height = 480, bg = "transparent")
 plot(formatted_times, gap, type = "l", xlab= "", ylab = "Global Active Power (kilowatts)")
 dev.off()
