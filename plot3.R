@@ -12,11 +12,11 @@ formatted_times <- strptime(times, format = "%Y-%m-%d %H:%M:%S")
 
 # Building the plot
 png("plot3.png", width = 480, height = 480)
-plot(formatted_times, d1$Sub_metering_1, type = "l", xlab= "", ylab = "Global Active Power (kilowatts)", col = "black")
+plot(formatted_times, d1$Sub_metering_1, type = "l", xlab= "", ylab = "Energy sub metering", col = "black")
 lines(formatted_times, d1$Sub_metering_2, col = "red")
 lines(formatted_times, d1$Sub_metering_3, col = "blue")
 
 # Adding a legend
-legend("topright", lty=c(1,1), lwd=c(2.5,2.5), col=c("black","red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+legend("topright", lty=c(1,1), lwd=c(1,1), col=c("black","red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 dev.off()
