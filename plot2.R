@@ -1,5 +1,5 @@
 # Reading data - The data is not by default in the repo (too heavy), it needs to be added
-c1<-read.table("household_power_consumption.txt", sep=";", header = TRUE,na.strings ="?")
+c1<-read.table("household_power_consumption.txt", sep=";", header = TRUE, na.strings ="?")
 
 # Subsetting
 ds = c("1/2/2007", "2/2/2007")
@@ -13,5 +13,5 @@ formatted_times <- strptime(times, format = "%Y-%m-%d %H:%M:%S")
 
 # Building the plot
 png("plot2.png", width = 480, height = 480)
-plot(formatted_times, gap, type = "l", xlabel= "", ylabel = "Global Active Power (kilowatts)")
+plot(formatted_times, gap, type = "l", xlab= "", ylab = "Global Active Power (kilowatts)")
 dev.off()
